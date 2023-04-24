@@ -78,7 +78,7 @@ First, let's add a workflow to lint our Markdown files in this repository.
 1. Add the following step to your workflow:
    ```yaml
         - name: Run markdown lint
-          run: |
+          run:
             npm install remark-cli remark-preset-lint-consistent
             npx remark . --use remark-preset-lint-consistent --frail
    ```
@@ -158,7 +158,7 @@ To upload artifacts to the artifact storage, we can use an action built by GitHu
          - uses: actions/checkout@v3
 
          - name: Run markdown lint
-           run: |
+           run: 
              npm install remark-cli remark-preset-lint-consistent
              npx remark . --use remark-preset-lint-consistent --frail
 
