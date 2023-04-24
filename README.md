@@ -78,7 +78,7 @@ First, let's add a workflow to lint our Markdown files in this repository.
 1. Add the following step to your workflow:
    ```yaml
         - name: Run markdown lint
-          run: |
+          run:
             npm install remark-cli remark-preset-lint-consistent
             npx remark . --use remark-preset-lint-consistent --frail
    ```
@@ -141,7 +141,7 @@ If the checks don't appear or if the checks are stuck in progress, there's a few
 <details id=3>
 <summary><h2>Step 3: Upload test reports</h2></summary>
 
-_The workflow has finished running! :sparkles:_
+The workflow has finished running! :sparkles:
 
 So what do we do when we need the work product of one job in another? We can use the built-in [artifact storage](https://docs.github.com/en/actions/advanced-guides/storing-workflow-data-as-artifacts) to save artifacts created from one job to be used in another job within the same workflow.
 
@@ -158,7 +158,7 @@ To upload artifacts to the artifact storage, we can use an action built by GitHu
          - uses: actions/checkout@v3
 
          - name: Run markdown lint
-           run: |
+           run: 
              npm install remark-cli remark-preset-lint-consistent
              npx remark . --use remark-preset-lint-consistent --frail
 
